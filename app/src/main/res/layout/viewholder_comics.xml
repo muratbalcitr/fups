@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.path.pathChallenge.feature.detail.domain.CharacterDetailViewModel" />
+
+        <variable
+            name="item"
+            type="com.path.data.remote.response.ComicsResponse.Data.Result" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_component_2x">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewComics"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageComics"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                tools:src="@drawable/ic_chevron_left" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/TextStyle1"
+            android:id="@+id/nameComics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.title}"
+             app:layout_constraintEnd_toEndOf="@id/cardviewComics"
+            app:layout_constraintStart_toStartOf="@id/cardviewComics"
+            app:layout_constraintTop_toBottomOf="@id/cardviewComics" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
