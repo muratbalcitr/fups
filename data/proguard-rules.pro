@@ -39,12 +39,12 @@
 #Coroutines, and other kotlinx
 -keepnames class kotlinx.* { *; }
 
--keepnames class  com.path.pathChallenge.ParcelableArg
--keepnames class  com.path.pathChallenge.SerializableArg
--keepnames class  com.path.pathChallenge.EnumArg
+-keepnames class  com.fups.pathChallenge.ParcelableArg
+-keepnames class  com.fups.pathChallenge.SerializableArg
+-keepnames class  com.fups.pathChallenge.EnumArg
 
--keep public class com.path.kale.** {*;}
--keep public class com.path.data.** {*;}
+-keep public class com.fups.kale.** {*;}
+-keep public class com.fups.data.** {*;}
 ##---------------Begin proguard configuration for Retrofit ----------
 # Retrofit does reflection on generic parameters. InnerClasses is required to use Signature and
 # EnclosingMethod is required to use InnerClasses.
@@ -77,11 +77,11 @@
 
 # Used for Kotlinx Serialization
 -dontnote kotlinx.serialization.SerializationKT
--keep,includedescriptorclasses class com.path.pathChallenge.**$$serializer { *; } # <-- change package name to your app's
--keepclassmembers class com.path.pathChallenge.** { # <-- change package name to your app's
+-keep,includedescriptorclasses class com.fups.pathChallenge.**$$serializer { *; } # <-- change package name to your app's
+-keepclassmembers class com.fups.pathChallenge.** { # <-- change package name to your app's
     *** Companion;
 }
--keepclasseswithmembers class com.path.pathChallenge.** { # <-- change package name to your app's
+-keepclasseswithmembers class com.fups.pathChallenge.** { # <-- change package name to your app's
     kotlinx.serialization.KSerializer serializer(...);
 }
 
@@ -118,7 +118,7 @@
   @com.google.gson.annotations.SerializedName <fields>;
 }
 
--keep class com.path.** { *; }
+-keep class com.fups.** { *; }
 # ServiceLoader support
 -keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
 -keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}

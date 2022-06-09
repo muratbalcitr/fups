@@ -1,11 +1,17 @@
 <resources>
-    <string name="app_name">Marvel</string>
-    <string name="indicator_position_size">%1$s / %2$s</string>
-    <string name="descritpion">Description</string>
-    <string name="text_share_dialog_title">Share</string>
-    <string name="character_details">Character Detail</string>
-    <string name="description">Description</string>
-    <string name="comics">Comics</string>
-    <string name="events">Events</string>
+    <string name="app_name">FUPS</string>
+    <string name="login_top_description">GSM numaranı ve şifreni girerek\nFUPS hesabına giriş yapabilirsin.</string>
+    <string name="login">GİRİŞ</string>
+    <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="country_code">Ülke Kodu</string>
+    <string name="gsm_number">GSM Numaran</string>
+    <string name="password">Şifren</string>
+    <string name="acoount_provider">HESABINLA NELER YAPABİLİRSİN?</string>
 
+    <string-array name="codes">
+        <item>+90</item>
+        <item>+91</item>
+        <item>+92</item>
+        <item>+93</item>
+    </string-array>
 </resources>

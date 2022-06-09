@@ -3,26 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
-    app:startDestination="@id/characterListFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/characterListFragment"
-        android:name="com.path.pathChallenge.feature.main.presentation.MarvelListFragment"
-        android:label="CharacterListFragment"
-        tools:layout="@layout/fragment_character_list">
+        android:id="@+id/loginFragment"
+        android:name="com.fups.challenge.feature.login.presenter.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_characterList_to_characterDetail"
-            app:destination="@id/characterDetailFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@android:anim/fade_in"
-            app:popExitAnim="@android:anim/fade_out" />
-
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/characterDetailFragment"
-        android:name="com.path.pathChallenge.feature.detail.presentation.CharacterDetailFragment"
-        android:label="CharacterDetailFragment">
-
-    </fragment>
+        android:id="@+id/homeFragment"
+        android:name="com.fups.challenge.feature.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
 </navigation>

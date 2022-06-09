@@ -1,5 +1,5 @@
 object Configs {
-    const val applicationId = "com.path.pathChallenge"
+    const val applicationId = "com.fups.pathChallenge"
     const val minSdkVersion = 26
     const val targetSdkVersion = 31
     const val compileSdkVersion = 31

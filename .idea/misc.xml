@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.18885869565217392" />
+        <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.5702576112412178" />
+        <entry key="app/src/main/res/drawable/bg_banner_round.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/bg_left_segment.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/bg_left_segment_selected.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/bg_right_segment.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/bg_right_segment_selected.xml" value="0.1585" />
+        <entry key="app/src/main/res/drawable/bg_shadow.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/ic_spinner.xml" value="0.1585" />
         <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.1585" />
@@ -19,11 +23,14 @@
         <entry key="app/src/main/res/layout/fragment_car_list.xml" value="0.2523076923076923" />
         <entry key="app/src/main/res/layout/fragment_character_detail.xml" value="0.2689393939393939" />
         <entry key="app/src/main/res/layout/fragment_character_list.xml" value="0.35011709601873536" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.6015262692473655" />
         <entry key="app/src/main/res/layout/layout.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/progress.xml" value="0.3104166666666667" />
         <entry key="app/src/main/res/layout/ragment_car_detail.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/ragment_car_list.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/viewholder_advert_info.xml" value="0.29583333333333334" />
+        <entry key="app/src/main/res/layout/viewholder_banner.xml" value="0.25" />
         <entry key="app/src/main/res/layout/viewholder_car_detail_images.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/viewholder_car_list.xml" value="0.5" />
         <entry key="app/src/main/res/layout/viewholder_character_detail.xml" value="0.36576629638671876" />

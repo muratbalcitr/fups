@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fups.challenge.feature.login.domain.LoginViewModel" />
+
+        <variable
+            name="item"
+            type="com.fups.data.remote.response.BannerResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_component_2x"
+        android:onClick="@{()->viewModel.navigateToMain()}"
+        android:background="@color/transparent"
+        android:shadowColor="#0c141433"
+        android:shadowDx="0"
+        android:shadowDy="8" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_component_1x"
+            android:background="@drawable/bg_shadow"
+            android:minHeight="@dimen/margin_160dp"
+            app:layout_constraintBottom_toBottomOf="@+id/banner_image_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView5"
+                style="@style/TextStyle0b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="96dp"
+                android:layout_marginTop="36dp"
+                android:text="@{item.title}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Sosyal Medya" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextStyle0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_96dp"
+                android:layout_marginTop="@dimen/margin_component_1x"
+                android:text="@{item.description}"
+                app:layout_constraintBottom_toTopOf="@+id/appCompatImageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5"
+                app:layout_constraintVertical_bias="0"
+                tools:text="Sosyal Sosyal Hesap’larını
+oluşturarak sevdiklerine
+para gönder, iste." />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView4"
+                android:layout_width="@dimen/margin_component_2x"
+                android:layout_height="@dimen/margin_component_2x"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_element_circle_chevron"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/banner_image_view"
+            android:layout_width="96dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="4dp"
+             android:scaleType="centerInside"
+            android:paddingBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+             app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_image_banner_big_01" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

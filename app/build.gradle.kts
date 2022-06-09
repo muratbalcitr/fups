@@ -7,9 +7,7 @@ plugins {
     id(Plugins.kotlinAndroidExtensions)
     kotlin(Plugins.kapt)
     id(Plugins.hiltPlugin)
-    id(Plugins.googleServices)
-    id(Plugins.crashlytics)
-}
+  }
 
 android {
     compileSdk = Configs.compileSdkVersion
@@ -148,17 +146,11 @@ dependencies {
     implementation(Dependencies.LifeCycle.liveData)
     implementation(Dependencies.LifeCycle.viewModel)
 
-    // Firebase
-    platform(Dependencies.Firebase.firebaseBom)
-    implementation(Dependencies.Firebase.firebaseAnalitics)
-    implementation(Dependencies.Firebase.firebaseCrashlytics)
-
     // Daager-Hilt
     implementation(Dependencies.DI.hilt)
     kapt(Dependencies.DI.hiltCompiler)
 
     // For instrumentation tests
-    androidTestImplementation(Dependencies.DI.hiltAndroidTesting)
     kaptAndroidTest(Dependencies.DI.hiltCompiler)
 
     // For local unit tests
@@ -173,6 +165,8 @@ dependencies {
     implementation(Dependencies.Network.okHttp)
     implementation(Dependencies.Network.loggingInterceptor)
 
+    implementation("com.github.skydoves:powerspinner:1.1.9")
+    implementation("app.futured.hauler:hauler:5.0.0")
     // Glide
     implementation(Dependencies.Glide.glide)
     annotationProcessor(Dependencies.Glide.glideCompiler)
@@ -183,8 +177,6 @@ dependencies {
     testImplementation(Dependencies.Test.truthExt)
     testImplementation(Dependencies.Test.mockK)
     testImplementation(Dependencies.Test.coreTesting)
-    androidTestImplementation(Dependencies.Test.androidJunit)
-    androidTestImplementation(Dependencies.Test.espressoCore)
 }
 fun com.android.build.api.dsl.ProductFlavor.stringField(entry: Pair<String, String>) {
     buildConfigField("String", entry.first, "\"${entry.second}\"")

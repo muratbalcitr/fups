@@ -5,16 +5,38 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="settings_line">#F9F9F9</color>
-    <color name="cardview_shadow_end_color">#03000000</color>
-    <color name="main_color">#f0131e</color>
-    <color name="blue">#328fcc</color>
-    <color name="recycler_background">#90B9B9B9</color>
-    <color name="favorite">#FF9800</color>
 
-    <color name="shadow_green">#9C1AB920</color>
-    <color name="shadow_red">#F44336</color>
-    <color name="backgroundCharactersList">#FFFFFF</color>
+    <color name="main_text">#606066</color>
+    <color name="hint_text">#909099</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="settings_line">#F9F9F9</color>
+    <color name="blue">#155ed4</color>
+    <color name="login_background">#d8d8d8</color>
+
+    <!-- Shadow Colors -->
+    <color name="shadow_01">#01CCD0E0</color>
+    <color name="shadow_02">#02CCD0E0</color>
+    <color name="shadow_03">#03CCD0E0</color>
+    <color name="shadow_04">#04CCD0E0</color>
+    <color name="shadow_05">#05CCD0E0</color>
+    <color name="shadow_06">#06CCD0E0</color>
+    <color name="shadow_07">#07CCD0E0</color>
+    <color name="shadow_08">#08CCD0E0</color>
+    <color name="shadow_09">#09CCD0E0</color>
+    <color name="shadow_10">#10CCD0E0</color>
+    <color name="shadow_11">#11CCD0E0</color>
+    <color name="shadow_12">#12CCD0E0</color>
+    <color name="shadow_13">#13CCD0E0</color>
+    <color name="shadow_14">#14CCD0E0</color>
+    <color name="shadow_15">#15CCD0E0</color>
+
+
+    <color name="shadow_16">#07CCD0E0</color>
+    <color name="shadow_17">#08CCD0E0</color>
+    <color name="shadow_18">#09CCD0E0</color>
+    <color name="shadow_19">#10CCD0E0</color>
+    <color name="shadow_20">#11CCD0E0</color>
+    <color name="shadow_21">#12CCD0E0</color>
+    <color name="transparent">#00000000</color>
 </resources>

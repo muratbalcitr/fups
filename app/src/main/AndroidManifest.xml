@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.path.pathChallenge">
+    package="com.fups.challenge">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:name="com.path.pathChallenge.core.platform.GlobalApplication"
+        android:name="com.fups.challenge.core.platform.GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MarvelChallenge"
+        android:theme="@style/Theme.challenge"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.path.pathChallenge.feature.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:name="com.fups.challenge.feature.MainActivity"
             android:exported="true">
             <intent-filter>
 

@@ -16,8 +16,6 @@ buildscript {
         classpath(Classpaths.kotlinSerialization)
         classpath(Classpaths.safeVarargs)
         classpath(Classpaths.hiltGradlePlugin)
-        classpath(Classpaths.googleServices)
-        classpath(Classpaths.crashlytics)
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

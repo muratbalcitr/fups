@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fups.challenge.feature.login.domain.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_background">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="@dimen/margin_component_8x"
+            android:layout_height="@dimen/margin_component_5x"
+            android:layout_marginTop="@dimen/margin_component_4x"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_element_logo_fups"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            style="@style/TextStyle1"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_page"
+            android:layout_marginTop="@dimen/margin_component_4x"
+            android:gravity="center_horizontal"
+            android:text="@string/login_top_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_component_4x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/appCompatEditText2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="128dp"
+                android:layout_height="@dimen/margin_56dp"
+                android:layout_marginStart="@dimen/padding_page"
+                android:background="@drawable/rounded_edittext"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView3"
+                    style="@style/TextStylen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_page"
+                    android:layout_marginTop="@dimen/margin_component_1x"
+                    android:text="@string/country_code"
+                    android:textColor="#909099"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/spinner"
+                    style="@style/TextStyle0b"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_page"
+                    android:text="+90"
+                    android:textColor="#17171a"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
+                    app:layout_constraintVertical_bias="0"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_arrow_show="false"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.5dp"
+                    app:spinner_item_array="@array/codes"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_width="@dimen/margin_96dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView2"
+                    android:layout_width="@dimen/padding_page"
+                    android:layout_height="@dimen/padding_page"
+                    android:layout_marginEnd="@dimen/margin_component_2x"
+                    android:src="@drawable/ic_icon_helper_dropdown"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                style="@style/TextStyle1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_component_4x"
+                android:layout_marginEnd="@dimen/padding_page"
+                android:background="@drawable/rounded_edittext"
+                android:digits="0123456789 "
+                android:textColor="#17171a"
+                android:hint="@string/gsm_number"
+                android:importantForAutofill="no"
+
+                android:inputType="phone"
+                android:longClickable="false"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/padding_page"
+                android:text="@{viewModel.phoneNumberLast}"
+                android:textColorHint="@color/hint_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appCompatEditText2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="5539679317" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/appCompatEditText3"
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_56dp"
+            android:layout_margin="@dimen/padding_page"
+            android:layout_marginStart="@dimen/padding_page"
+            android:background="@drawable/rounded_edittext"
+            android:digits="0123456789 "
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword|textNoSuggestions"
+            android:longClickable="false"
+
+            android:maxLength="3"
+            android:maxLines="1"
+
+            android:paddingStart="@dimen/padding_page"
+            android:text="@{viewModel.password}"
+            android:textColorHint="@color/hint_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            style="@style/TextStyle0b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_page"
+            android:layout_marginTop="@dimen/margin_component_2x"
+            android:onClick="@{()->viewModel.navigateToMain()}"
+            android:text="@string/forgot_password"
+            android:textColor="@color/blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_component_2x"
+            android:layout_height="@dimen/margin_component_2x"
+            android:layout_marginTop="@dimen/margin_component_2x"
+            android:layout_marginEnd="@dimen/padding_page"
+            android:onClick="@{()->viewModel.getInfo()}"
+            android:src="@drawable/ic_combined_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            style="@style/TextStyle0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_56dp"
+            android:layout_margin="@dimen/padding_page"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/blue"
+            android:letterSpacing="0.04"
+            android:onClick="@{()->viewModel.navigateToMain()}"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_page"
+            android:layout_marginBottom="27dp"
+            android:text="@string/acoount_provider"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_page"
+            android:background="#00000000"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
+            app:layout_constraintVertical_bias="1"
+            tools:itemCount="1"
+            tools:listitem="@layout/viewholder_banner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
